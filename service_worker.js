@@ -9,7 +9,7 @@ this.addEventListener('install', evt => {
         '.',
         'manifest.webmanifest',
         'index.html',
-        'coscup.jpg',
+        'hitcon.png',
       ]);
     }));
 });

@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>COSCUP 2020</title>
+  <title>HITCON 2020</title>
 
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
@@ -11,11 +11,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="COSCUP 2020">
-  <link rel="apple-touch-icon" href="coscup.jpg">
-  <link rel="apple-touch-icon" sizes="152x152" href="coscup.jpg">
-  <link rel="apple-touch-icon" sizes="180x180" href="coscup.jpg">
-  <link rel="apple-touch-icon" sizes="167x167" href="coscup.jpg">
+  <meta name="apple-mobile-web-app-title" content="HITCON 2020">
+  <link rel="apple-touch-icon" href="hitcon.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="hitcon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="hitcon.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="hitcon.png">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
@@ -278,13 +278,13 @@
 <body>
 
 <header>
-  <h1>COSCUP 2020 ▸ 下一場聽什麼？</h1>
+  <h1>HITCON 2020 ▸ 下一場聽什麼？</h1>
 </header>
 
 <div id="agenda">
   <nav>
-    <a href="#20200801" v-bind:class="{ active: (today == '20200801') }">D1</a>
-    <a href="#20200802" v-bind:class="{ active: (today == '20200802') }">D2</a>
+    <a href="#20200911" v-bind:class="{ active: (today == '20200911') }">D1</a>
+    <a href="#20200912" v-bind:class="{ active: (today == '20200912') }">D2</a>
     <a v-on:click.prevent="toggleNextOnly" v-bind:class="{ active: nextOnly }">找</a>
     <a v-on:click.prevent="toggleStarredOnly" v-bind:class="{ active: starredOnly }">星</a>
     <a v-on:click.prevent="toggleTimeMachine" v-bind:class="{ active: timeMachine }">跳</a>
@@ -352,11 +352,11 @@
 
 <footer>
   <div>
-    <a href="https://github.com/dannvix/COSCUP_Agenda" target="_blank">按這裡到 GitHub 幫我們按個星 ⭐️</a>
+    <a href="https://github.com/Inndy/HITCON_Agenda" target="_blank">按這裡到 GitHub 幫我們按個星 ⭐️</a>
     &nbsp;|&nbsp;
     <a onclick="purgeOfflineData()">清理離線資料 🗑</a>
     <div style="margin-top:4pt;color:hsl(0, 0%, 80%);font-family:monospace;">
-      v20200801r1
+      v20200911r1
     </div>
   </div>
 </footer>
@@ -553,12 +553,9 @@
       };
     }).filter(t => t.talks.length);
 
-    // COSCUP 2020
+    // HITCON 2020
     const sortedRoomIds = [
-      'RB105', 'AU',
-      'TR209', 'TR211', 'TR212', 'TR213', 'TR214',
-      'TR309', 'TR311', 'TR313',
-      'TR409-2', 'TR410', 'TR411', 'TR412-1', 'TR412-2', 'TR413-1', 'TR413-2'
+      'R0', 'R1', 'R2', 'R3'
     ];
     const sortedTracksWithTalks = tracksWithTalks.sort((a, b) =>
       (sortedRoomIds.indexOf(a.roomId) - sortedRoomIds.indexOf(b.roomId)));
@@ -590,7 +587,7 @@
     updateTracks(window.programs);
   }
 
-  const programsUri = 'https://coscup.org/2020/json/session.json';
+  const programsUri = 'https://inndy.tw/hitcon2020/sessions.json';
 
   let hashChangeEvt = undefined;
   let refreshInterval = undefined;
@@ -624,7 +621,7 @@
   }
 
   if (!window.location.hash) {
-    window.location.hash = '#20200801';
+    window.location.hash = '#20200911';
   }
 
   if (window.navigator.serviceWorker) {

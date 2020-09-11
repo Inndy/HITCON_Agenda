@@ -1,8 +1,6 @@
-[COSCUP 2020 行動議程表](https://dannvix.github.io/COSCUP_Agenda/)
+[HITCON 2020 行動議程表](https://hitcon.github.io/HITCON_Agenda/)
 =================
 
-參加 COSCUP 許多年，老是在找下一場該去聽什麼？
+參加 HITCON 許多年，老是在找下一場該去聽什麼？
 
 做個行動議程表幫助自己快速搜尋！
-
-![screenshot](screenshot.png?raw=true)
